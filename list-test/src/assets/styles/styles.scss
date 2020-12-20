@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "trendy";
+  src: url("../fonts/icons/trendy-icons.eot");
+  src: url("../fonts/icons/trendy-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/icons/trendy-icons.woff") format("woff"),
+    url("../fonts/icons/trendy-icons.ttf") format("truetype"),
+    url("../fonts/icons/trendy-icons.svg#trendy") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-"] {
+  line-height: 100% !important;
+  transition: all 0.15s ease-in;
+}
+[class*="icon-"]:before {
+  display: inline-block;
+  font-family: "trendy";
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-lock:before {
+  content: "\0041";
+}
+.icon-add:before {
+  content: "\0042";
+}
+.icon-heart:before {
+  content: "\0043";
+}
+.icon-trophy:before {
+  content: "\0044";
+}
+.icon-star:before {
+  content: "\0045";
+}
+.icon-shield:before {
+  content: "\0046";
+}
+.icon-pin:before {
+  content: "\0047";
+}
+.icon-epack:before {
+  content: "\0048";
+}
+.icon-eye:before {
+  content: "\0049";
+}

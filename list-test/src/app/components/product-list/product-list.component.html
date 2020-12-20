@@ -1,0 +1,95 @@
+<div class="row-container" *ngFor="let item of list;let i = index">
+  <div class="product-index">
+    <span>{{i + 1}}</span>
+  </div>
+  <div class="img-parent">
+    <img [src]="item?.imagePath">
+    <div class="spacer sm"></div>
+    <div class="sm row-title">
+      <div class="title">{{item?.title}}</div>
+      <div class="price">${{item?.price}}</div>
+    </div>
+    <div class="spacer sm"></div>
+    <div class="sm row-tags">
+     <div class="wrapper">
+       <img class="icon" src="../../../assets/images/trophy.svg">
+       <span class="value">223</span>
+     </div>
+     <div class="wrapper">
+      <img class="icon" src="../../../assets/images/tag.svg">
+      <span class="value">{{item?.tags}}</span>
+    </div>
+    <div class="wrapper">
+      <img class="icon" src="../../../assets/images/star.svg">
+      <span class="value">{{item?.rating}}</span>
+    </div>
+    <div class="wrapper">
+      <img class="icon" src="../../../assets/images/shield-tik.svg">
+      <span class="value">{{item?.percentage}}%</span>
+    </div>
+    <div class="wrapper" *ngIf="item.ePacket">
+      <img class="icon" src="../../../assets/images/flash.svg">
+      <span class="value">ePack</span>
+    </div>
+    </div>
+  </div>
+  <div class="product-details">
+    <div class="info">
+      <div class="name-parent">
+        <div class="name">{{item?.title}}</div>
+        <span class="tag tik">
+          <img class="border" src="../../../assets/images/tik-border.svg">
+          <img class="tikk" src="../../../assets/images/tik.svg">
+        </span>
+        <div class="tag created">
+          2 Days Ago
+        </div>
+        <div class="tag type">
+          Dropship
+        </div>
+        <div class="tag cloud-parent">
+          <img src="../../../assets/images/cloud.svg">
+        </div>
+        <div class="tag visibility-off-parent">
+          <img src="../../../assets/images/visibility-off.svg">
+        </div>
+        <div class="tag cog-parent">
+          <img src="../../../assets/images/cog.svg">
+        </div>
+      </div>
+      <div class="statistics">
+        <div class="tag tagg">
+          <img src="../../../assets/images/tag.svg" >
+          <span>{{item?.tags}}</span>
+        </div>
+        <div class="tag rate">
+          <img src="../../../assets/images/star.svg" >
+          <span>{{item?.rating}}</span>
+        </div>
+        <div class="tag shield">
+          <img src="../../../assets/images/shield-tik.svg" >
+          <span>{{item?.percentage}}%</span>
+        </div>
+        <div class="tag flash" *ngIf="item.ePacket">
+          <img src="../../../assets/images/flash.svg" >
+          <span>ePack</span>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="price">${{item?.price}}</div>
+      <div class="btns">
+        <span class="tag visibility">
+          <img class="body" src="../../../assets/images/visibility.svg">
+          <img class="eye" src="../../../assets/images/visibility-eye.svg">
+        </span>
+        <span class="tag heart">
+          <img src="../../../assets/images/heart.svg">
+        </span>
+        <span class="tag plus">
+          <img src="../../../assets/images/plus.svg">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
